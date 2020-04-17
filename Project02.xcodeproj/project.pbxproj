@@ -7,19 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C05BD58B2445BFA5003D2DAD /* InputMethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05BD58A2445BFA5003D2DAD /* InputMethodViewModel.swift */; };
+		C05BD58D2445BFD0003D2DAD /* InputMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05BD58C2445BFD0003D2DAD /* InputMethodViewController.swift */; };
 		C0850407243C30370073DE11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0850406243C30370073DE11 /* LaunchScreen.storyboard */; };
 		C0850409243C30460073DE11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0850408243C30460073DE11 /* Main.storyboard */; };
+		C0BBAFC0244845FF00E8633F /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BBAFBF244845FF00E8633F /* Driver.swift */; };
+		C0BBAFC22449869F00E8633F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BBAFC12449869F00E8633F /* TestViewController.swift */; };
+		C0BBAFC4244986C900E8633F /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BBAFC3244986C900E8633F /* TestViewModel.swift */; };
 		C0BCEB06243C32F000823117 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BCEB03243C32F000823117 /* SceneDelegate.swift */; };
 		C0BCEB07243C32F000823117 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BCEB04243C32F000823117 /* AppDelegate.swift */; };
 		C0BCEB08243C32F000823117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0BCEB05243C32F000823117 /* Assets.xcassets */; };
 		C0D8E2B6243C578B00BAF5C6 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8E2B5243C578B00BAF5C6 /* BaseViewModel.swift */; };
 		C0D8E2B8243C579B00BAF5C6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8E2B7243C579B00BAF5C6 /* LoginViewModel.swift */; };
-		C0D8E2BC243C5A9400BAF5C6 /* Driver1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8E2BA243C5A9300BAF5C6 /* Driver1.swift */; };
 		C0D8E2C2243C8D8100BAF5C6 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8E2C1243C8D8100BAF5C6 /* BaseNavigationController.swift */; };
 		C0D8E2CB243CACB200BAF5C6 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8E2CA243CACB200BAF5C6 /* Route.swift */; };
 		C0D8E2CD243CACC500BAF5C6 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8E2CC243CACC500BAF5C6 /* SceneCoordinator.swift */; };
 		C0D8E2CF243CACD600BAF5C6 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D8E2CE243CACD600BAF5C6 /* SceneCoordinatorType.swift */; };
-		C0FB0B6824446E2E00B4A966 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FB0B6724446E2E00B4A966 /* MainViewController.swift */; };
 		EA1CA265243C55240037687A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1CA264243C55240037687A /* LoginViewController.swift */; };
 		EA1CA267243C56570037687A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1CA266243C56570037687A /* BaseViewController.swift */; };
 		F072A977BCF10AAA1DC009E2 /* Pods_Project02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF57D613F5C1F2362F034C6 /* Pods_Project02.framework */; };
@@ -28,21 +31,24 @@
 /* Begin PBXFileReference section */
 		0CF57D613F5C1F2362F034C6 /* Pods_Project02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DCCA88F24868DF7141A5CC9 /* Pods-Project02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project02.debug.xcconfig"; path = "Target Support Files/Pods-Project02/Pods-Project02.debug.xcconfig"; sourceTree = "<group>"; };
+		C05BD58A2445BFA5003D2DAD /* InputMethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMethodViewModel.swift; sourceTree = "<group>"; };
+		C05BD58C2445BFD0003D2DAD /* InputMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputMethodViewController.swift; sourceTree = "<group>"; };
 		C08503E7243C29730073DE11 /* Project02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08503F8243C29760073DE11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0850406243C30370073DE11 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0850408243C30460073DE11 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C0BBAFBF244845FF00E8633F /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		C0BBAFC12449869F00E8633F /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		C0BBAFC3244986C900E8633F /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		C0BCEB03243C32F000823117 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C0BCEB04243C32F000823117 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0BCEB05243C32F000823117 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0D8E2B5243C578B00BAF5C6 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		C0D8E2B7243C579B00BAF5C6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		C0D8E2BA243C5A9300BAF5C6 /* Driver1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver1.swift; sourceTree = "<group>"; };
 		C0D8E2C1243C8D8100BAF5C6 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		C0D8E2CA243CACB200BAF5C6 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		C0D8E2CC243CACC500BAF5C6 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneCoordinator.swift; path = Project02/Source/Route/SceneCoordinator.swift; sourceTree = SOURCE_ROOT; };
 		C0D8E2CE243CACD600BAF5C6 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
-		C0FB0B6724446E2E00B4A966 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D773E42AECDAE13E09BF8568 /* Pods-Project02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project02.release.xcconfig"; path = "Target Support Files/Pods-Project02/Pods-Project02.release.xcconfig"; sourceTree = "<group>"; };
 		EA1CA264243C55240037687A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA1CA266243C56570037687A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -118,7 +124,8 @@
 			children = (
 				C0D8E2C0243C8D5F00BAF5C6 /* Base */,
 				EA1CA264243C55240037687A /* LoginViewController.swift */,
-				C0FB0B6724446E2E00B4A966 /* MainViewController.swift */,
+				C05BD58C2445BFD0003D2DAD /* InputMethodViewController.swift */,
+				C0BBAFC12449869F00E8633F /* TestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -128,6 +135,8 @@
 			children = (
 				C0D8E2B5243C578B00BAF5C6 /* BaseViewModel.swift */,
 				C0D8E2B7243C579B00BAF5C6 /* LoginViewModel.swift */,
+				C05BD58A2445BFA5003D2DAD /* InputMethodViewModel.swift */,
+				C0BBAFC3244986C900E8633F /* TestViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -174,7 +183,7 @@
 		C0D8E2B9243C5A5D00BAF5C6 /* Route */ = {
 			isa = PBXGroup;
 			children = (
-				C0D8E2C9243CAC9900BAF5C6 /* New Group */,
+				C0BBAFBF244845FF00E8633F /* Driver.swift */,
 				C0D8E2CA243CACB200BAF5C6 /* Route.swift */,
 				C0D8E2CC243CACC500BAF5C6 /* SceneCoordinator.swift */,
 				C0D8E2CE243CACD600BAF5C6 /* SceneCoordinatorType.swift */,
@@ -189,14 +198,6 @@
 				C0D8E2C1243C8D8100BAF5C6 /* BaseNavigationController.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		C0D8E2C9243CAC9900BAF5C6 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				C0D8E2BA243C5A9300BAF5C6 /* Driver1.swift */,
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,16 +297,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0BBAFC22449869F00E8633F /* TestViewController.swift in Sources */,
 				EA1CA267243C56570037687A /* BaseViewController.swift in Sources */,
-				C0FB0B6824446E2E00B4A966 /* MainViewController.swift in Sources */,
+				C05BD58D2445BFD0003D2DAD /* InputMethodViewController.swift in Sources */,
 				EA1CA265243C55240037687A /* LoginViewController.swift in Sources */,
+				C0BBAFC0244845FF00E8633F /* Driver.swift in Sources */,
 				C0D8E2CB243CACB200BAF5C6 /* Route.swift in Sources */,
 				C0D8E2CD243CACC500BAF5C6 /* SceneCoordinator.swift in Sources */,
-				C0D8E2BC243C5A9400BAF5C6 /* Driver1.swift in Sources */,
+				C05BD58B2445BFA5003D2DAD /* InputMethodViewModel.swift in Sources */,
 				C0BCEB07243C32F000823117 /* AppDelegate.swift in Sources */,
 				C0BCEB06243C32F000823117 /* SceneDelegate.swift in Sources */,
 				C0D8E2B6243C578B00BAF5C6 /* BaseViewModel.swift in Sources */,
 				C0D8E2C2243C8D8100BAF5C6 /* BaseNavigationController.swift in Sources */,
+				C0BBAFC4244986C900E8633F /* TestViewModel.swift in Sources */,
 				C0D8E2CF243CACD600BAF5C6 /* SceneCoordinatorType.swift in Sources */,
 				C0D8E2B8243C579B00BAF5C6 /* LoginViewModel.swift in Sources */,
 			);

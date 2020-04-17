@@ -30,11 +30,6 @@ class SceneCoordinator : SceneCoordinatorType {
         currentViewController = window.rootViewController!
     }
     
-    func transition(to scene: Scene, type: SceneTransitionType, _ animated: Bool = true) {
-        let vc = scene.createViewController()
-        return transition(to: vc, type: type, animated)
-    }
-    
     static func actualViewController(for viewController: UIViewController) -> UIViewController {
         if let navigationController = viewController as? UINavigationController {
             return navigationController.viewControllers.last!
@@ -42,7 +37,11 @@ class SceneCoordinator : SceneCoordinatorType {
             return viewController
         }
     }
-
+    
+    func transition(to scene: Scene, type: SceneTransitionType, _ animated: Bool = true) {
+        let vc = scene.createViewController()
+        return transition(to: vc, type: type, animated)
+    }
     
     func transition(to viewController: UIViewController, type: SceneTransitionType, _ animated: Bool = true) {
         let viewController = viewController
@@ -61,7 +60,12 @@ class SceneCoordinator : SceneCoordinatorType {
             self.window.rootViewController = viewController
             self.currentViewController = SceneCoordinator.actualViewController(for: viewController)
         case .push:
-            break
+            let nav = currentViewController?.navigationController
+            guard let navigationController = nav else {
+                break
+            }
+            navigationController.pushViewController(viewController, animated: true)
+            self.currentViewController = SceneCoordinator.actualViewController(for: viewController)
         case .modal:
             break
         case .slideToRight:
@@ -69,5 +73,13 @@ class SceneCoordinator : SceneCoordinatorType {
         case .popup:
             break
         }
+    }
+    
+    func pop(toRootview: Bool = false, animated: Bool) {
+        
+    }
+    
+    func popToPrevious(animated: Bool = true) {
+        
     }
 }

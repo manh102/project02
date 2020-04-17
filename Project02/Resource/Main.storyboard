@@ -2,11 +2,59 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ii-MX-K62">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Input Method View Controller-->
+        <scene sceneID="pib-mq-ood">
+            <objects>
+                <viewController storyboardIdentifier="InputMethodViewController" id="UFn-X9-uVS" customClass="InputMethodViewController" customModule="Project02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HCC-FK-7nb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KR-eh-TBa">
+                                <rect key="frame" x="184" y="173" width="46" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dvk-Pr-8VO"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="loginBtnAction:" destination="UFn-X9-uVS" eventType="touchUpInside" id="GlT-uB-0SO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="h1b-Zx-Tgv" firstAttribute="trailing" secondItem="4KR-eh-TBa" secondAttribute="trailing" constant="184" id="RUd-ST-fSy"/>
+                            <constraint firstItem="4KR-eh-TBa" firstAttribute="top" secondItem="h1b-Zx-Tgv" secondAttribute="top" constant="85" id="biB-Bv-8aA"/>
+                            <constraint firstItem="4KR-eh-TBa" firstAttribute="leading" secondItem="h1b-Zx-Tgv" secondAttribute="leading" constant="184" id="bsx-3c-8b5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h1b-Zx-Tgv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Vk-Es-rFj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSE-Lv-rJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2618.840579710145" y="-630.13392857142856"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="lka-3G-RxV">
+            <objects>
+                <viewController storyboardIdentifier="TestViewController" id="4tz-VH-iZU" customClass="TestViewController" customModule="Project02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DcA-EH-f5N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1uM-2S-QDY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wdP-rI-lZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3392" y="-638"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="OXN-3v-c1y">
             <objects>
@@ -40,25 +88,10 @@
             </objects>
             <point key="canvasLocation" x="1708.6956521739132" y="26.785714285714285"/>
         </scene>
-        <!--Main View Controller-->
-        <scene sceneID="5nt-GX-VRI">
-            <objects>
-                <viewController storyboardIdentifier="MainViewController" id="vvQ-iM-4bj" customClass="MainViewController" customModule="Project02" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cCe-9u-e27">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="elC-yU-2sJ"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fnB-AO-OTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2545" y="25"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="i9B-W2-bLf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dGr-q7-wBZ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginNavigation" automaticallyAdjustsScrollViewInsets="NO" id="dGr-q7-wBZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cbw-6f-PNJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -72,6 +105,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbB-sL-5G5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="798.55072463768124" y="26.785714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oaV-4W-JOX">
+            <objects>
+                <navigationController storyboardIdentifier="InputMethodNavigation" automaticallyAdjustsScrollViewInsets="NO" id="GGb-kM-AvT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="46F-C8-I8I">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UFn-X9-uVS" kind="relationship" relationship="rootViewController" id="GnC-yN-0cM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJg-Vi-2jZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708.6956521739132" y="-630.13392857142856"/>
         </scene>
     </scenes>
 </document>

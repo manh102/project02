@@ -8,18 +8,27 @@
 
 import UIKit
 
-class LoginViewController: BaseViewController {
-
+class LoginViewController: BaseViewController<LoginViewModel> {
+    
+    var testVar = ""
+    
     override func setupDisplay() {
         super.setupDisplay()
     
     }
     
+    override func bindViewModel() {
+        viewModel.onReload = { [weak self] in
+            guard let `self` = self else {return}
+            self.testVar = self.viewModel.mUsername
+            print("test: \(self.testVar)")
+        }
+        viewModel.onReload?()
+    }
+    
     @IBAction func loginBtnAction(_ sender: Any) {
         print("Tapped on login button")
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        // instantiate your desired ViewController
-        let mainVC = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
-        self.navigationController?.pushViewController(mainVC, animated: true)
+        Router.shared.toInputMethod()
+        viewModel.mUsername = "Tapped on login button2222"
     }
 }

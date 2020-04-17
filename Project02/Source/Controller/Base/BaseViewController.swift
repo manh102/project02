@@ -8,14 +8,44 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+protocol BindableType {
+    
+    associatedtype ViewModelType
+    var viewModel: ViewModelType! { get set }
+    
+    func bindViewModel()
+}
 
+extension BindableType where Self: UIViewController {
+
+    mutating func bindVM(to model: Self.ViewModelType) {
+        viewModel = model
+        // 2020/04/17
+        bindViewModel()
+    }
+}
+
+extension BindableType where Self: UIView {
+    
+    mutating func bindVM(to model: Self.ViewModelType) {
+        viewModel = model
+        bindViewModel()
+    }
+}
+
+class BaseViewController<T: ViewModelType> : UIViewController, BindableType {
+    
+    var viewModel: T!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    func bindViewModel() {
+        //Implement in subsclass
+    }
 
     //MARK: Color and displaying
     func setupDisplay() {

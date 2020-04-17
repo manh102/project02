@@ -27,37 +27,15 @@ class Router {
         coordinator = SceneCoordinator(window: window)
     }
     
-    func routeMeToAuthentication() {
-        Driver1.shared.routeType = .authenticate
-        //let main = BaseNavigationController(rootViewController: Router.shared.getMainController())
-        
-        // get your storyboard
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-
-        // instantiate your desired ViewController
-        let rootController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-
-        // Because self.window is an optional you should check it's value first and assign your rootViewController
-//        let window = UIApplication.shared.windows.first
-//        window?.makeKeyAndVisible()
-//        window?.rootViewController = rootController
+    func toLaunching() {
+        self.coordinator.transition(to: Scene.login(LoginViewModel.instance()), type: SceneTransitionType.root)
     }
     
-    func getAuthNavigationController() -> BaseNavigationController {
-        if self.authNavigationController == nil {
-            //self.authNavigationController = BaseNavigationController(rootViewController: HomeController())
-        }
-        return self.authNavigationController
+    func toInputMethod() {
+        self.coordinator.transition(to: Scene.inputMethod(InputMethodViewModel.instance()), type: SceneTransitionType.root)
     }
     
-    func getMainController() -> LoginViewController {
-        if self.loginViewController == nil {
-            self.loginViewController = LoginViewController()
-        }
-        return self.loginViewController
-    }
-    
-    func toLaunching () {
-        self.coordinator.transition(to: Scene.login(LoginViewModel()), type: SceneTransitionType.root)
+    func toTest() {
+        self.coordinator.transition(to: Scene.test(TestViewModel.instance()), type: SceneTransitionType.push)
     }
 }
